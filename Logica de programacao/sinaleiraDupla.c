@@ -101,7 +101,6 @@ void loop()
     saida(am2, 0);
     saida(vm5, 1);
     saida(vm8, 1);
-    
     delay(2000);
     //tela7
     saida(vm4, 0);
@@ -135,11 +134,5 @@ void loop()
     saida(vm7, 0);
     delay(2000);
     saida(vm8, 0);
-    
-    
-   
   }
-    
-  
-  
 }
