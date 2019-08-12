@@ -1,3 +1,4 @@
+//define apelidos para os pinos correspondentes
 #define vm1 5
 #define vm2 6
 #define vm3 7
@@ -18,6 +19,7 @@
 #define vd8 A5
 #define saida digitalWrite
 
+//configuração dos pinos como saida.
 void setup()
 {
   pinMode(vm1, OUTPUT);
@@ -41,7 +43,7 @@ void setup()
 }
 
 
-
+//inicio no programada, inicialmente sinal amarelo intermitente.
 void loop()
 {
   saida(am1, 1);
@@ -62,6 +64,7 @@ void loop()
   saida(am1, 0);
   saida(am2, 0);
   delay(500);
+  //loop infinito até desliga o sistema, inicio do sinal verde/vermelho
   while(true)
   {
     //tela1
