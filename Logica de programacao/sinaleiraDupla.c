@@ -1,3 +1,6 @@
+/* Esse programa feito para arduino contem a programação de 2 sinaleiras, enquanto uma abre(verde) a outra
+está fechada(Vermelha)*/
+
 //define apelidos para os pinos correspondentes
 //teste git
 #define vm1 5
