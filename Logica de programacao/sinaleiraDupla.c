@@ -1,4 +1,5 @@
 //define apelidos para os pinos correspondentes
+//teste git
 #define vm1 5
 #define vm2 6
 #define vm3 7
