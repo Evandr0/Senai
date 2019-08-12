@@ -68,7 +68,7 @@ void loop()
   saida(am1, 0);
   saida(am2, 0);
   delay(500);
-  //loop infinito até desliga o sistema, inicio do sinal verde/vermelho
+  //loop infinito até desligar o sistema, inicio do sinal verde/vermelho
   while(true)
   {
     //tela1
