@@ -182,7 +182,7 @@ void setup()
 
     //Exericio j) varf5 da cantina 3
     Serial.println("Este programa fara o calculo gasto na cantina, digite os valores dos produtos.");
-    Serial.println("Obs: cafeh x3 e doce de leite x2.");
+    Serial.println("Obs: cafe x3 e doce de leite x2.");
     Serial.print("Digite o valor do cafe: ");
     varf1 = le_numero_quebrado();
     Serial.println(varf1);
@@ -196,13 +196,13 @@ void setup()
     varf4 = le_numero_quebrado();
     Serial.println(varf4);
     varf5 = 3*varf1+varf2+varf3+2*varf4;
-    Serial.print("A varf5 da cantina eh: ");
+    Serial.print("A conta da cantina eh: ");
     Serial.println(varf5);
     Serial.println("#######################");
     Serial.println();
 
 
-    //Exercicio k) varf1h por alunos
+    //Exercicio k) cafe por alunos
 
     Serial.println("Este programa calcula a quantidade de cafe por Alunos.");
     Serial.print("Digite a quantidade de cafe em kilogramas: ");
@@ -218,7 +218,7 @@ void setup()
     Serial.println("#######################");
     Serial.println();
 
-    //Exercicio k) varf1h por alunos + EXTRA
+    //Exercicio k) cafe por alunos + EXTRA
 
     Serial.println("Este programa calcula a quantidade de cafe por Alunos + EXTRA.");
     Serial.print("Digite a quantidade de cafe em kilogramas: ");
