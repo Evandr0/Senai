@@ -10,10 +10,10 @@ void setup()
 void loop()
 {
     Serial.print("Digite o primeiro numero: ");
-    numero1 = le_numero();
+    numero1 = le_numero_quebrado();
     Serial.println(numero1);
     Serial.print("Digite o segundo numero: ");
-    numero2 = le_numero();
+    numero2 = le_numero_quebrado();
     Serial.println(numero2);
     media = (numero1+numero2)/2;
     Serial.print("A media dos numeros eh: ");
