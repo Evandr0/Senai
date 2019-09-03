@@ -18,6 +18,11 @@ void loop()
     media = (numero1+numero2)/2;
     Serial.print("A media dos numeros eh: ");
     Serial.println(media);
+    if( media >= 7 ){
+        Serial.println("Passou!");
+    } else {
+        Serial.println("Recuperacao!");
+    }
 
 
 }
