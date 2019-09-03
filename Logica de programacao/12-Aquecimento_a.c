@@ -16,7 +16,7 @@ void loop()
     raio = le_numero_quebrado();
     Serial.println(raio);
     area = pi*(raio*raio);
-    //também pode ser usado area = pi* pow(raio, 2);
+    //também pode ser usado area = pi* pow(raio, 2);  -- pow(valor, potencia)
     Serial.print("A area do circulo eh: ");
     Serial.println(area);
     Serial.println("===============================\n");
