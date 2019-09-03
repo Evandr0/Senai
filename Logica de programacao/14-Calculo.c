@@ -1,5 +1,6 @@
 /*Programa recupera dois numeros inteiros
-Soma o quadrado dos numeros digitados e depois compara qual numero que você digitou eh maior.*/
+Soma o quadrado dos numeros digitados e depois compara qual numero que você digitou eh maior.
+Teste git*/
 int numero1, numero2;
 float soma;
 
