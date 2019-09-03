@@ -1,3 +1,5 @@
+/*Programa recupera dois numeros inteiros
+Soma o quadrado dos numeros digitados e depois compara qual numero que você digitou eh maior.*/
 int numero1, numero2;
 float soma;
 
