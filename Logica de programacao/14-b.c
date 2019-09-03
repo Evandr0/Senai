@@ -1,6 +1,6 @@
 /*Programa calcula a media de dois números.
 Ex: Numero 37.PNG*/
-float numero1, numero2, media;
+float nota1, nota2, media;
 
 void setup()
 {
@@ -9,14 +9,14 @@ void setup()
 
 void loop()
 {
-    Serial.print("\nDigite o primeiro numero: ");
-    numero1 = le_numero_quebrado();
-    Serial.println(numero1);
-    Serial.print("Digite o segundo numero: ");
-    numero2 = le_numero_quebrado();
-    Serial.println(numero2);
-    media = (numero1+numero2)/2;
-    Serial.print("A media dos numeros eh: ");
+    Serial.print("\nDigite a primeira nota: ");
+    nota1 = le_numero_quebrado();
+    Serial.println(nota1);
+    Serial.print("Digite a segunda nota: ");
+    nota2 = le_numero_quebrado();
+    Serial.println(nota2);
+    media = (nota1+nota2)/2;
+    Serial.print("A sua media eh: ");
     Serial.println(media);
 
     if( media >= 7 ){
