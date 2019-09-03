@@ -1,4 +1,5 @@
-/*Programa calcula a media de dois números.*/
+/*Programa calcula a media de dois números.
+Ex: Numero 37.PNG*/
 float numero1, numero2, media;
 
 void setup()
