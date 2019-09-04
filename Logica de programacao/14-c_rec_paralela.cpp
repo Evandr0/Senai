@@ -1,5 +1,5 @@
-/*Programa calcula a media de dois números.
-Ex: Numero 37.PNG*/
+/*Programa calcula a media de dois números com recuperação paralela.
+*/
 float nota1, nota2, rp1, rp2, media;
 float temp1, temp2;
 void setup()
@@ -22,11 +22,6 @@ void loop()
     rp2 = le_numero_quebrado();
     Serial.println(rp2);
 
-    /*
-    media = (nota1+nota2)/2;
-    Serial.print("A sua media eh: ");
-    Serial.println(media);
-    */
    if (nota1 > rp1) {
        temp1 = nota1;
    } else {
