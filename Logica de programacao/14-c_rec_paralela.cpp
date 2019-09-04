@@ -21,17 +21,19 @@ void loop()
     Serial.print("Digite a recuperacao da segunda nota: ");
     rp2 = le_numero_quebrado();
     Serial.println(rp2);
-
+    //teste para ver quem eh maior nota1 ou rpc1 e armazena a maior em temp1
    if (nota1 > rp1) {
        temp1 = nota1;
    } else {
        temp1 = rp1;
    }
+   //teste para ver quem eh maior nota2 ou rpc2 e armazena a maior em temp2
    if (nota2 > rp2) {
        temp2 = nota2;
    } else {
        temp2 =rp2;
    }
+   
    media = (temp1+temp2)/2;
 
    Serial.print("Sua media eh: ");
