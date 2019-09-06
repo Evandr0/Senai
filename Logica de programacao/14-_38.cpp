@@ -1,4 +1,4 @@
-/*Programa calcula a media de dois números com recuperação paralela.
+/*Programa calcula as corridas de uber e soma o total.
 */
 float corre1, corre2, corre3, corre4, corre5, soma;
 void setup()

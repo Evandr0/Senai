@@ -1,5 +1,5 @@
-/*Programa calcula a media de dois números com recuperação paralela.
-*/
+/*Programa calcula as corridas de uber e soma o total.
+Porém retira 25% da taxinha do uber e calcula o salario no final do mês*/
 float corre1, corre2, corre3, corre4, corre5, soma, soma2, salario;
 void setup()
 {

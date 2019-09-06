@@ -1,5 +1,4 @@
-/*Programa calcula a media de dois números com recuperação paralela.
-*/
+/* Programa conta salario horas trabalhas e desconto ao final do mês*/
 float ht, vh, pd, sb, desc, sl, td;
 void setup()
 {
