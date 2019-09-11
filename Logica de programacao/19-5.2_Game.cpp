@@ -1,23 +1,23 @@
 
-int numero1, numero2;
+int pontos;
 
 void setup() {
     Serial.begin(9600);
 }
 
 void loop() {
-    Serial.print("Digite o numero 1: ");
-    numero1 = le_numero();
-    Serial.println(numero1);
-    Serial.print("Digite o numero 2: ");
-    numero2 = le_numero();
-    Serial.println(numero2);
-    if (numero1 > numero2){
-        Serial.println("O numero 1 eh maior que o numero 2");
-    } else if (numero1 < numero2){
-        Serial.println("O numero 2 eh maior que o numero 1");
+    Serial.println("Este programa le uma pontuacao e informa como um jogador esta se saindo");
+    Serial.print("Digite a sua pontuacao: ");
+    pontos = le_numero();
+    Serial.println(pontos);
+    if (pontos <= 10){
+        Serial.println("Deu ruim");
+    } else if (pontos > 10 && pontos <=100) {
+        Serial.println("Ta.. continue tentando, voce chegara lah");
+    } else if (pontos > 100 && pontos <= 200) {
+        Serial.println("Supimpa");
     } else {
-        Serial.println("O numero 1 eh igual ao numero 2");
+        Serial.println("MITOU");
     }
     
 }
