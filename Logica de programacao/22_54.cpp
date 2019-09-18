@@ -3,7 +3,7 @@ float descontoassociado = 0, desconto = 0, multa = 0, total, valor1;
 String nome, convenios, s, n, imprimir;
 int dias; 
 
-//==================== Desconto por tempo ====================
+//==================== Desconto por tempo(dias) ====================
 int diaria1 = 5, diaria2 = 10, diaria3 = 11;
 
 //==================== Valor das diarias =====================
@@ -27,8 +27,9 @@ void loop() {
     Serial.println(convenios);
     Serial.print("Digite qual a porcentagem do desconto adicional? Resp: ");
     desconto = le_numero();
-    Serial.println(desconto);
-    Serial.print("Cliente obteve algum acrescimo? Multa? Digite o valor Resp: ");
+    Serial.print(desconto);
+    Serial.println("%");
+    Serial.print("Cliente obteve algum acrescimo? Multa? Digite o valor Resp: R$ ");
     multa = le_numero();
     Serial.println(multa);
     
@@ -62,16 +63,16 @@ void loop() {
     Serial.println(nome);
     Serial.print("Dias hospedado: ");
     Serial.println(dias);
-    Serial.print("Desconto Uber: ");
+    Serial.print("Desconto Uber: R$ ");
     Serial.println(descontoassociado);
-    Serial.print("Outros descontos: ");
+    Serial.print("Outros descontos: R$ ");
     Serial.println(desconto);
-    Serial.print("Total de acrescimos/multas: ");
+    Serial.print("Total de acrescimos/multas: R$");
     Serial.println(multa);
-    Serial.print("Total a pagar: ");
+    Serial.print("Total a pagar: R$ ");
     Serial.println(total);
     Serial.println("=============================================================");
-    Serial.print("Deseja imprimir? s ou n");
+    Serial.print("Deseja imprimir? s ou n: ");
     imprimir = le_nome();
     Serial.println(imprimir);
         if (imprimir == "s") {
