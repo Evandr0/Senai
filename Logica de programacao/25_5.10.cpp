@@ -1,5 +1,5 @@
 /*Este programa calcula IMC de uma pessoa..*/
-
+//
 float altura, peso;
 int genero;
 void setup() {
@@ -13,10 +13,12 @@ void loop() {
     genero = le_numero();
     Serial.print("Genero = ");
     Serial.println(genero);
-    Serial.print("Digite sua altura: ");
-    altura = le_numero_quebrado();
-    Serial.println(altura);
+
     if (genero > 0 && genero <=2){
+        Serial.print("Digite sua altura: ");
+        altura = le_numero_quebrado();
+        Serial.println(altura);
+    
 
         if (genero == 1){
             Serial.println("========================================");
