@@ -1,6 +1,7 @@
 /*Ler a distancia. e informar o tempo que vai levar para chegar em um determinado local na velocidade da luz..*/
 
-float distancia, t;
+float distancia, t, resto;
+int tint;
 long velocidadeluz = 299792; //em km por segundo
 void setup() {
     Serial.begin(9600);
@@ -12,8 +13,19 @@ void loop() {
     distancia = le_numero_quebrado();
     Serial.println(distancia);
     t = distancia/velocidadeluz;
+    tint = int(t);
     Serial.print("Tempo em segundos sera: ");
     Serial.println(t);
+    if (t > 60){
+        t = t/60;
+        resto = tint -t;
+        Serial.print("Tempo em minutos: ");
+        Serial.println(t); //tempo em minutos
+        Serial.print("quanto vale o tint: ");
+        Serial.println(tint);
+        Serial.print("Resto vale: ");
+        Serial.println(resto);
+    }
     
 
 
