@@ -1,7 +1,7 @@
 /*Ler a distancia. e informar o tempo que vai levar para chegar em um determinado local na velocidade da luz..*/
 
 float distancia, t;
-long velocidadeluz = 299792;
+long velocidadeluz = 299792; //em km por segundo
 void setup() {
     Serial.begin(9600);
 }
