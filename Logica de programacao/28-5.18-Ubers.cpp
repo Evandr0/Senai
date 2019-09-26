@@ -1,6 +1,6 @@
 /*Ler a distancia. e informar o tempo que vai levar para chegar em um determinado local na velocidade da luz..*/
 
-float distancia, t, resto;
+float distancia, s, h, d, minuto, meses, anos, resto;
 int tint;
 long velocidadeluz = 299792; //em km por segundo
 void setup() {
@@ -12,21 +12,51 @@ void loop() {
     Serial.print("Informa a distancia em KM: ");
     distancia = le_numero_quebrado();
     Serial.println(distancia);
-    t = distancia/velocidadeluz;
-    tint = int(t);
+    s = distancia/velocidadeluz;
+    tint = int(s);
+    Serial.print("Inteiro de T=");
+    Serial.println(tint);
     Serial.print("Tempo em segundos sera: ");
-    Serial.println(t);
-    if (t > 60){
-        t = t/60;
-        resto = tint -t;
+    Serial.println(s);
+    if (s > 60){
+        s = s/60;
+        resto = tint -s;
         Serial.print("Tempo em minutos: ");
-        Serial.println(t); //tempo em minutos
+        Serial.println(s); //tempo em minutos
+        minuto = s;
         Serial.print("quanto vale o tint: ");
         Serial.println(tint);
         Serial.print("Resto vale: ");
         Serial.println(resto);
     }
-    
+    if (minuto > 60){
+      minuto = minuto/60;
+      Serial.print("tempo em horas eh: ");
+      Serial.println(minuto);
+      h = minuto;
+      
+    }
+    if (h > 24){
+      h = h/24;
+      Serial.print("tempo em Dias eh: ");
+      Serial.println(h);
+      d = h;
+      
+    }
+    if (d > 30){
+      d = d/30;
+      Serial.print("tempo em meses eh: ");
+      Serial.println(d);
+      meses = d;
+      
+    }
+    if (meses > 12){
+      meses = meses/12;
+      Serial.print("tempo em anos eh: ");
+      Serial.println(meses);
+      anos = meses;
+      
+    }
 
 
 
