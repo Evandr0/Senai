@@ -30,7 +30,6 @@ void loop() {
     Serial.print(" KM levara ");
     Serial.print(anos);
     Serial.print(" anos. \nOu ");
-    separador();
     Serial.print(meses);
     Serial.print(" meses. \nOu ");
     Serial.print(dias);
