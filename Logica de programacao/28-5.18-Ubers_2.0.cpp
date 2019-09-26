@@ -1,35 +1,36 @@
 /*Ler a distancia. e informar o tempo que vai levar para chegar em um determinado local na velocidade da luz..*/
 // 1 ano luz = 9.461.000.000.000 KM
 //      long = 2.147.483.647
-float distancia, segundos, horas, dias, minutos, meses, anos, resto, segundos2, rminutos, rhoras, rdias, rmeses, ranos, rsegundos;
+double distancia, segundos, horas, dias, minutos, meses, anos, resto, segundos2, rminutos, rhoras, rdias, rmeses, ranos, rsegundos;
 int tint;
-long velocidadeluz = 299792; //em km por segundo
+long velocidadeluz = 299793; //em km por segundo
 void setup() {
     Serial.begin(9600);
 }
 
 void loop() {
-    Serial.print("Digite a distancia em KM: ");
+    Serial.println();
+    separador();
+    Serial.print("\nDigite a distancia em KM: ");
     distancia = le_numero_quebrado();
     Serial.println(distancia);
     segundos = distancia/velocidadeluz;
-    segundos2 = segundos; //calculo segundos.
-    //segundos = (minutos - int(minutos))*60;
-    //resto = (segundos - int(segundos))*1000; //calculo milisegundos.
+    segundos2 = segundos;
     Serial.print("Total em segundos = ");
     Serial.println(segundos);
 
     minutos = segundos/60;
-    horas = minutos/60;
-    dias = horas/24;
-    meses = dias/30;
-    anos = meses/12;
+    horas = segundos/3600;
+    dias = segundos/86400;
+    meses = segundos/2592000;
+    anos = segundos/31104000;
 
     Serial.print("O tempo para percorer ");
     Serial.print(distancia);
-    Serial.print(" KM levara\n");
+    Serial.print(" KM levara ");
     Serial.print(anos);
     Serial.print(" anos. \nOu ");
+    separador();
     Serial.print(meses);
     Serial.print(" meses. \nOu ");
     Serial.print(dias);
@@ -45,67 +46,91 @@ void loop() {
     separador();
 
 
-    Serial.println("Teste numero 2.");
+    Serial.println("============ Ou se preferir... =============\n");
 
+    /*######## Parte que faz o calculo das casas decimais 'quebradas' ######## */
 
+    ranos = anos - int(anos); //ranos = perta que sobra em anos 132.04 no caso 0.4
+    meses = ranos*12; // Isso vai dar 4.8
+    rmeses = meses - int(meses); //parte que sobra dos meses 4.8 entao 0.8
+    dias = rmeses*30; // 0.8 * 30 = 24 dias
+    rdias = dias - int(dias); // parte que sobra dos dias
+    horas = rdias*24;
+    rhoras = horas - int(horas);
+    minutos = rhoras*60;
+    rminutos = minutos - int(minutos);
+    segundos = rminutos*60;
 
-    rminutos = (minutos - int(minutos))* 60; //resultado em segundos quando minuto der numero quebrado.
-    rdias = int(horas);
-    //hora vale 1.14
+    /*##########################################################################*/
 
-    rhoras = int(dias/30); //38/30 = 1.26
-    
-    rminutos = (horas - int(horas))*60; // =8.4 minutos
-    rsegundos = (rminutos - int(rminutos))*60; // rsegundos = segundos.
+    String distancia2 = "a distancia informada em";
     
     if (segundos2 < 60)  {
-        Serial.print("Tempo em segundos: ");
+        Serial.print("\n O tempo para percorer ");
+        Serial.print(distancia2);
+        Serial.print(" KM sera de ");
         Serial.println(segundos);
     } else if (segundos2 > 60 && segundos2 < 3600) { //1min até 1 hora
-        Serial.print("Tempo em minutos: ");
-        Serial.println(minutos);
-        Serial.print("segundos: ");
-        Serial.println(segundos);
+        Serial.print(" O tempo para percorer ");
+        Serial.print(distancia2);
+        Serial.print(" KM sera de ");
+        Serial.print(minutos);
+        Serial.print(" minutos e ");
+        Serial.print(segundos);
+        Serial.println(" segundos: ");
     } else if (segundos2 > 3600 && segundos2 <  86400) { //1 horas até 1 dia
-        Serial.print("Tempo em horas: ");
-        Serial.println(int(horas));
-        Serial.print("Tempo em minutos: ");
-        Serial.println(int(rminutos));
-        Serial.print("segundos: ");
-        Serial.println(rsegundos);
+        Serial.print(" O tempo para percorer ");
+        Serial.print(distancia2);
+        Serial.print(" KM sera de ");
+        Serial.print(int(horas));
+        Serial.print(" horas ");
+        Serial.print(int(minutos));
+        Serial.print(" minutos e ");
+        Serial.print(segundos);
+        Serial.println(" segundos.");
+        
     } else if (segundos2 > 86400 && segundos2 < 2592000) { //1dias até 30 dias
-        Serial.print("Tempo em dias: ");
-        Serial.println(int(dias));
-        Serial.print("Tempo em horas: ");
-        Serial.println(int(rhoras));
-        Serial.print("Tempo em minutos: ");
-        Serial.println(int(rminutos));
-        Serial.print("segundos: ");
-        Serial.println(rsegundos);
+        Serial.print(" O tempo para percorer ");
+        Serial.print(distancia2);
+        Serial.print(" KM sera de ");
+        Serial.print(int(dias));
+        Serial.print(" dias ");
+        Serial.print(int(horas));
+        Serial.print(" horas ");
+        Serial.print(int(minutos));
+        Serial.print(" minutos e ");
+        Serial.print(segundos);
+        Serial.println(" segundos.");
     } else if (segundos2 > 2592000 && segundos2 < 31104000){ //30 dias ateh 12 meses
-        Serial.print("Tempo em meses: ");
-        Serial.println(int(meses));
-        Serial.print("Tempo em dias: ");
-        Serial.println(int(rdias));
-        Serial.print("Tempo em horas: ");
-        Serial.println(int(rhoras));
-        Serial.print("Tempo em minutos: ");
-        Serial.println(int(rminutos));
-        Serial.print("segundos: ");
-        Serial.println(rsegundos);
+        Serial.print(" O tempo para percorer ");
+        Serial.print(distancia2);
+        Serial.print(" KM sera de ");
+        Serial.print(int(meses));
+        Serial.print(" meses ");
+        Serial.print(int(dias));
+        Serial.print(" dias ");
+        Serial.print(int(horas));
+        Serial.print(" horas ");
+        Serial.print(int(minutos));
+        Serial.print(" minutos e ");
+        Serial.print(segundos);
+        Serial.println(" segundos.");
     } else {
-        Serial.print("Tempo em anos: ");
-        Serial.println(int(anos));
-        Serial.print("Tempo em meses: ");
-        Serial.println(int(meses));
-        Serial.print("Tempo em dias: ");
-        Serial.println(int(rdias));
-        Serial.print("Tempo em horas: ");
-        Serial.println(int(rhoras));
-        Serial.print("Tempo em minutos: ");
-        Serial.println(int(rminutos));
-        Serial.print("segundos: ");
-        Serial.println(rsegundos);
+        Serial.print(" O tempo para percorer ");
+        Serial.print(distancia2);
+        Serial.print(" KM sera de ");
+        Serial.print(int(anos));
+        Serial.print(" anos ");
+        Serial.print(int(meses));
+        Serial.print(" meses ");
+        Serial.print(int(dias));
+        Serial.print(" dias ");
+        Serial.print(int(horas));
+        Serial.print(" horas ");
+        Serial.print(int(minutos));
+        Serial.print(" minutos e ");
+        Serial.print(segundos);
+        Serial.println(" segundos.");
     }
     
 
@@ -187,3 +212,4 @@ delay(10);
 valor = conteudo.toFloat(); 
 return valor;
 }
+/*CopyRigth By Evandro   -- 2019*/

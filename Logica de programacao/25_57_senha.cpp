@@ -86,3 +86,4 @@ delay(10);
 valor = conteudo.toFloat(); 
 return valor;
 }
+/*CopyRigth By Evandro   -- 2019*/

@@ -25,10 +25,10 @@ void loop() {
 }
 
 
-
 /**
  * Função que lê uma string da Serial
  * e retorna-a
+
  */
 String le_nome(){
   String conteudo = "";
@@ -93,3 +93,4 @@ delay(10);
 valor = conteudo.toFloat(); 
 return valor;
 }
+/*CopyRigth By Evandro   -- 2019*/
