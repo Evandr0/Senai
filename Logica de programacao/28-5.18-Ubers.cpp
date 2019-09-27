@@ -8,55 +8,54 @@ void setup() {
 }
 
 void loop() {
-    Serial.println("Este programa ira calcular o tempo de viagem caso o deslocamento se de na velocidade da luz.");
-    Serial.print("Informa a distancia em KM: ");
-    distancia = le_numero_quebrado();
-    Serial.println(distancia);
-    s = distancia/velocidadeluz;
-    tint = int(s);
-    Serial.print("Inteiro de T=");
-    Serial.println(tint);
-    Serial.print("Tempo em segundos sera: ");
-    Serial.println(s);
-    if (s > 60){
-        s = s/60;
-        resto = tint -s;
-        Serial.print("Tempo em minutos: ");
-        Serial.println(s); //tempo em minutos
-        minuto = s;
-        Serial.print("quanto vale o tint: ");
-        Serial.println(tint);
-        Serial.print("Resto vale: ");
-        Serial.println(resto);
-    }
-    if (minuto > 60){
-      minuto = minuto/60;
-      Serial.print("tempo em horas eh: ");
-      Serial.println(minuto);
-      h = minuto;
-      
-    }
-    if (h > 24){
-      h = h/24;
-      Serial.print("tempo em Dias eh: ");
-      Serial.println(h);
-      d = h;
-      
-    }
-    if (d > 30){
-      d = d/30;
-      Serial.print("tempo em meses eh: ");
-      Serial.println(d);
-      meses = d;
-      
-    }
-    if (meses > 12){
-      meses = meses/12;
-      Serial.print("tempo em anos eh: ");
-      Serial.println(meses);
-      anos = meses;
-      
-    }
+  Serial.println();
+  separador();
+  Serial.println("Este programa ira calcular o tempo de viagem caso o deslocamento se de na velocidade da luz.");
+  Serial.print("Informe a distancia em KM: ");
+  distancia = le_numero_quebrado();
+  Serial.println(distancia);
+  s = distancia/velocidadeluz;
+  separador();
+  Serial.print("Tempo em segundos sera: ");
+  Serial.println(s);
+  separador();
+
+  if (s > 60){
+      s = s/60;
+      resto = tint -s;
+      Serial.print("Tempo em minutos: ");
+      Serial.println(s); //tempo em minutos
+      minuto = s;
+  }
+  if (minuto > 60){
+    minuto = minuto/60;
+    Serial.print("tempo em horas eh: ");
+    Serial.println(minuto);
+    h = minuto;
+    
+  }
+  if (h > 24){
+    h = h/24;
+    Serial.print("tempo em Dias eh: ");
+    Serial.println(h);
+    d = h;
+    
+  }
+  if (d > 30){
+    d = d/30;
+    Serial.print("tempo em meses eh: ");
+    Serial.println(d);
+    meses = d;
+    
+  }
+  if (meses > 12){
+    meses = meses/12;
+    Serial.print("tempo em anos eh: ");
+    Serial.println(meses);
+    anos = meses;
+    
+  }
+  separador();
 
 
 
@@ -133,3 +132,4 @@ delay(10);
 valor = conteudo.toFloat(); 
 return valor;
 }
+/*CopyRigth By Evandro   -- 2019*/
