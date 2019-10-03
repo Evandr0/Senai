@@ -49,7 +49,7 @@ void loop() {
 
     /*######## Parte que faz o calculo das casas decimais 'quebradas' ######## */
 
-    ranos = anos - int(anos); //ranos = perta que sobra em anos 132.04 no caso 0.4
+    ranos = anos - int(anos); //ranos = parte que sobra em anos 132.04 no caso 0.4
     meses = ranos*12; // Isso vai dar 4.8
     rmeses = meses - int(meses); //parte que sobra dos meses 4.8 entao 0.8
     dias = rmeses*30; // 0.8 * 30 = 24 dias
