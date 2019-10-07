@@ -18,17 +18,17 @@ void loop() {
     if(salario < 1903.99){
         Serial.println("ISENTO");
         separador();
-    } else if (salario > 1903.99 && salario < 2826.65){
+    } else if (salario > 1903.99 && salario <= 2826.65){
         Serial.print("Jucca tera de pagar 7.5% de IR, portanto recebera: R$");
         salario = salario*0.925;
         Serial.println(salario);
         separador();
-    } else if (salario > 2826.65 && salario < 3751.05){
+    } else if (salario > 2826.65 && salario <= 3751.05){
         Serial.print("Jucca tera de pagar 15% de IR, portanto recebera: R$");
         salario = salario*0.75;
         Serial.println(salario);
         separador();
-    } else if (salario > 3751.06 && salario < 4664.68){
+    } else if (salario > 3751.06 && salario <= 4664.68){
         Serial.print("Jucca tera de pagar 22.5% de IR, portanto recebera: R$");
         salario = salario*0.775;
         Serial.println(salario);
