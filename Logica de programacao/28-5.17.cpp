@@ -42,7 +42,7 @@ void loop() {
     separador();
 
     Serial.println("Calculo para IR Paulo GueDEV.");
-    if (salario < salariobase*6){
+    if (salario <= salariobase*6){
         Serial.println("ISENTO");
         separador();
     } else {
