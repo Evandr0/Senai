@@ -7,7 +7,7 @@ long velocidadeluz = 299793; //em km por segundo
 void setup() {
     Serial.begin(9600);
 }
-
+//
 void loop() {
     Serial.println();
     separador();
@@ -25,7 +25,7 @@ void loop() {
     meses = segundos/2592000;
     anos = segundos/31104000;
 
-    Serial.print("O tempo para percorer ");
+    Serial.print("O tempo para percorrer ");
     Serial.print(distancia);
     Serial.print(" KM levara ");
     Serial.print(anos);
@@ -67,7 +67,7 @@ void loop() {
     String distancia2 = "a distancia informada em";
     
     if (segundos2 < 60)  {
-        Serial.print("\nO tempo para percorer ");
+        Serial.print("\nO tempo para percorrer ");
         Serial.print(distancia2);
         Serial.print(" KM sera de ");
         Serial.print(int(segundos));
@@ -78,7 +78,7 @@ void loop() {
         Serial.println("Ou seja, tempo muito pequeno para nosso calculo.");
         }
     } else if (segundos2 > 60 && segundos2 < 3600) { //1min até 1 hora
-        Serial.print(" O tempo para percorer ");
+        Serial.print(" O tempo para percorrer ");
         Serial.print(distancia2);
         Serial.print(" KM sera de ");
         Serial.print(int(minutos));
@@ -88,7 +88,7 @@ void loop() {
         Serial.print(milisegundos);
         Serial.println(" milisegundos.");
     } else if (segundos2 > 3600 && segundos2 <  86400) { //1 horas até 1 dia
-        Serial.print(" O tempo para percorer ");
+        Serial.print(" O tempo para percorrer ");
         Serial.print(distancia2);
         Serial.print(" KM sera de ");
         Serial.print(int(horas));
@@ -101,7 +101,7 @@ void loop() {
         Serial.println(" milisegundos.");
         
     } else if (segundos2 > 86400 && segundos2 < 2592000) { //1dias até 30 dias
-        Serial.print(" O tempo para percorer ");
+        Serial.print(" O tempo para percorrer ");
         Serial.print(distancia2);
         Serial.print(" KM sera de ");
         Serial.print(int(dias));
@@ -115,7 +115,7 @@ void loop() {
         Serial.print(milisegundos);
         Serial.println(" milisegundos.");
     } else if (segundos2 > 2592000 && segundos2 < 31104000){ //30 dias ateh 12 meses
-        Serial.print(" O tempo para percorer ");
+        Serial.print(" O tempo para percorrer ");
         Serial.print(distancia2);
         Serial.print(" KM sera de ");
         Serial.print(int(meses));
@@ -131,7 +131,7 @@ void loop() {
         Serial.print(milisegundos);
         Serial.println(" milisegundos.");
     } else {
-        Serial.print(" O tempo para percorer ");
+        Serial.print(" O tempo para percorrer ");
         Serial.print(distancia2);
         Serial.print(" KM sera de ");
         Serial.print(int(anos));
