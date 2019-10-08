@@ -1,64 +1,26 @@
-/*Ler a distancia. e informar o tempo que vai levar para chegar em um determinado local na velocidade da luz..*/
-double distancia;
-float s, h, d, minuto, meses, anos, resto;
-int tint;
-unsigned long velocidadeluz = 299792; //em km por segundo
+/*Descobrir se um numero eh par ou impar.*/
+
+int numero, resto;
+
 void setup() {
     Serial.begin(9600);
 }
 
 void loop() {
-  Serial.println();
-  separador();
-  Serial.println("Este programa ira calcular o tempo de viagem caso o deslocamento se de na velocidade da luz.");
-  Serial.print("Informe a distancia em KM: ");
-  distancia = le_numero_quebrado();
-  Serial.println(distancia);
-  s = distancia/velocidadeluz;
-  separador();
-  Serial.print("Tempo em segundos sera: ");
-  Serial.println(s);
-  separador();
+    Serial.println("Este programa informa se o numero digitado eh par ou impar.");
+    Serial.print("Digite um numero: ");
+    numero = le_numero_quebrado();
+    resto = numero % 2;
 
-  if (s > 60){
-      s = s/60;
-     
-      Serial.print("Tempo em minutos: ");
-      Serial.println(s); //tempo em minutos
-      minuto = s;
-  }
-  if (minuto > 60){
-    minuto = minuto/60;
-    Serial.print("tempo em horas eh: ");
-    Serial.println(minuto);
-    h = minuto;
-    
-  }
-  if (h > 24){
-    h = h/24;
-    Serial.print("tempo em Dias eh: ");
-    Serial.println(h);
-    d = h;
-    
-  }
-  if (d > 30){
-    d = d/30;
-    Serial.print("tempo em meses eh: ");
-    Serial.println(d);
-    meses = d;
-    
-  }
-  if (meses > 12){
-    meses = meses/12;
-    Serial.print("tempo em anos eh: ");
-    Serial.println(meses);
-    anos = meses;
-    
-  }
-  separador();
+    if(resto == 0){
+        Serial.println("O numero eh par.");
+    } else {
+        Serial.println("O numero eh impar.");
+    }
 
+    
 
-
+  
 }
 
 void separador(){

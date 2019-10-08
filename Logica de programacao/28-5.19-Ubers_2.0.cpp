@@ -3,7 +3,7 @@
 //      long = 2.147.483.647
 double distancia, segundos, horas, dias, minutos, meses, anos, resto, segundos2, rminutos, rhoras, rdias, rmeses, ranos, rsegundos, milisegundos;
 int tint;
-long velocidadeluz = 299793; //em km por segundo
+unsigned long velocidadeluz = 299793; //em km por segundo
 void setup() {
     Serial.begin(9600);
 }
@@ -191,6 +191,29 @@ int le_numero()
 String conteudo = "";
 char caractere;
 int valor;
+while(Serial.available() == 0);
+// Enquanto receber algo pela serial
+while(Serial.available() > 0) {
+// Lê byte da serial
+caractere = Serial.read();
+// Ignora caractere de quebra de linha
+if (caractere != '\n'){
+// Concatena valores
+conteudo.concat(caractere);
+}
+// Aguarda buffer serial ler próximo caractere
+delay(10);
+}
+valor = conteudo.toInt(); 
+return valor;
+}
+
+
+unsigned long le_numero_long()
+{
+String conteudo = "";
+char caractere;
+unsigned long valor;
 while(Serial.available() == 0);
 // Enquanto receber algo pela serial
 while(Serial.available() > 0) {
