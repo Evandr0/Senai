@@ -7,6 +7,7 @@ void setup() {
 }
 
 void loop() {
+    separador();
     Serial.print("Digite o seu peso atual: ");
     peso = le_numero_quebrado();
     Serial.println(peso);
@@ -19,16 +20,22 @@ void loop() {
 
     if (IMC < 18.5){
         Serial.println(" Voce esta abaixo do peso.");
+        separador();
     } else if (IMC >= 18.5 && IMC <= 24.9){
         Serial.println(" Voce esta com peso ideal.");
+        separador();
     } else if (IMC >= 25 && IMC <= 29.9) {
         Serial.println(" Voce esta com sobrepeso.");
+        separador();
     } else if (IMC >= 30 && IMC <= 34.9) {
         Serial.println(" Obesidade grau 1.");
+        separador();
     } else if (IMC >= 35 && IMC <= 39.9){
         Serial.println(" Obesidade grau 2.");
+        separador();
     } else {
         Serial.println(" Obesidade grau 3.");
+        separador();
     }
 
  
