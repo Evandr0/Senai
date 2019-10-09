@@ -4,7 +4,7 @@ void setup() {
 }
 
 void loop() {
-    v1 = 1, v2 =2, v3 =3;
+    v1 = 4, v2 =2, v3 =3;
     separador();
     Serial.print("Digite um numero: ");
     numero = le_numero();
