@@ -7,8 +7,13 @@ void setup() {
 
 void loop() {
 
+    Serial.print("Digiteo numero");
+    numero = le_numero();
+    nmenor = numero;
+    nmaior = numero;
+
     
-    for(cont = 1; cont <=15; cont++){
+    for(cont = 1; cont <=14; cont++){
         Serial.print("Digite o numero");
         numero = le_numero();
         Serial.println(numero);
@@ -18,11 +23,8 @@ void loop() {
         } else if (numero > nmaior){
             nmaior = numero;
         } else {
-            Serial.println("Sao Iguais.");
+            Serial.println("Sao Iguais.");//asd
         }
-
-
-
 
     }
     Serial.print("O numero menor eh:");
