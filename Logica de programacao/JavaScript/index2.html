@@ -11,27 +11,26 @@
             //declaração de variaveis
             var n1,n2,media
 
-            
-
             //chamada das funções.
             calculaMedia()
 
-            //declaraçã de funções;.
+            //declaração de funções;.
             function calculaMedia(){
-                n1 = 10
-                n2 = 5
+                n1 = prompt("Digite a nota 1")
+                n2 = prompt("Digite a nota 2")
 
                 media = (parseFloat(n1) + parseFloat(n2)) / 2
 
-                alert(media)
-
-
-
+                alert("A media das notas é: " + media) //escreve no alert
+                document.write("Nota 1: " + n1 + " | Nota 2: " + n2 + " | Media: " + media) //escreve na página
+                if(media >= 7){
+                    alert("Passou com média: " + media)
+                    document.write("<br>Passou com média: " + media)
+                } else {
+                    alert("RECUPERAÇÃO")
+                    document.write("<br><h1><b>RECUPERAÇÃO</b></h1>")
+                }
             }
-
-
-
         </script>
-
     </body>
 </html>
