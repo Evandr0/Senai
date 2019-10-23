@@ -1,0 +1,32 @@
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <h1>Calculo de notas WEB</h1>
+    <p><i>Programa pergunta o número de notas e informa a Média.</i></p>
+
+</head>
+
+<body>
+    <script type="text/javascript">
+        var qNotas, cont, media, nota
+        parseInt(cont = 1)
+        parseFloat(media = 0)
+
+        qNotas = parseInt(prompt("Quantas notas o aluno possui?"))
+
+        while (cont <= qNotas) {
+            nota = parseFloat(prompt("Digite a nota " + cont))
+            media = media + nota
+            cont++
+
+
+        }
+        media = media / qNotas
+
+        alert("O aluno possui " + qNotas + " notas e a Média dele é: " + media)
+        document.write("O aluno possui " + qNotas + " notas e a Média dele é: " + media)
+    </script>
+</body>
+
+</html>
