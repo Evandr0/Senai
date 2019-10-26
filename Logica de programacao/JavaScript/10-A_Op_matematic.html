@@ -1,0 +1,21 @@
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <h1>Calculo do salario diario</h1>
+    <p><i>Programa pergunta o seu salario mensal e calcula quanto você ganha no dia..</i></p>
+
+</head>
+
+<body>
+    <script type="text/javascript">
+        var salario_diario, salario, dias
+        salario = prompt("Digite seu salario Mensal.")
+        dias = prompt("Digite quantos dias trabalha no Mês.")
+        salario_diario = salario / dias
+        alert("Seu salario diário é R$" + salario_diario.toFixed(2))
+        document.write("<br> Salario mensal: R$" + salario + "<br> Dias trabalhados: " + dias + " dias" + "<br> Salario diario: R$" + salario_diario.toFixed(2))
+    </script>
+</body>
+
+</html>

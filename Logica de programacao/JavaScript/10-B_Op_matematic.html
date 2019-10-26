@@ -1,0 +1,23 @@
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <h1>Calculo da Cantina</h1>
+    <p><i>Programa pergunta os valores pagos nos produtos e calcula a conta da cantina.</i></p>
+
+</head>
+
+<body>
+    <script type="text/javascript">
+        var conta, cafe, coxinha, halls, doceDeLeite
+        cafe = parseFloat(prompt("Digite o preço do café."))
+        coxinha = parseFloat(prompt("Digite o preço da coxinha."))
+        halls = parseFloat(prompt("Digite o preço do Halls."))
+        doceDeLeite = parseFloat(prompt("Digite o preço do doce de leite."))
+        conta = cafe + coxinha + halls + doceDeLeite
+        alert("A sua conta foi de R$" + conta)
+        document.write("<br>Preço do café: R$" + cafe.toFixed(2) + "<br>Preço da coxinha: R$" + coxinha.toFixed(2) + "<br>Preço do Halls: R$" + halls.toFixed(2) + "<br>Preço do doce de leite: R$" + doceDeLeite.toFixed(2) + "<br>Valor total da conta: R$" + conta.toFixed(2))
+    </script>
+</body>
+
+</html>
