@@ -1,35 +1,39 @@
+<!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="utf-8">
-        <h1>Minha pagina Web 2</h1>
-        <h2>Notas + medias qqqq</h2>
 
-    </head>
-    <body>
-        <script type ="text/javascript">
-            alert("WTF")
-            var qNotas, cont, media, nota
-            parseInt(cont = 1)
-            parseFloat(media = 0)
+<head>
+    <meta charset="utf-8">
+    <h1>Minha pagina Web 2</h1>
+    <h2>Notas + medias qqqq</h2>
 
-            qNotas = parseInt(prompt("Quantas notas o aluno possui?"))
+</head>
 
-            while (cont <= qNotas){
-                nota = parseFloat(prompt("Digite a nota " + cont))
-                media = media + nota
-                cont++
+<body>
+    <script type="text/javascript">
+        alert("WTF")
+        var qNotas, cont, media, nota
+        parseInt(cont = 1)
+        parseFloat(media = 0)
 
+        qNotas = parseInt(prompt("Quantas notas o aluno possui?"))
 
-            }
-            media = media/qNotas
-
-            alert("Media é: " + media)
+        while (cont <= qNotas) {
+            nota = parseFloat(prompt("Digite a nota " + cont))
+            media = media + nota
+            cont++
 
 
+        }
+        media = media / qNotas
 
-            
-           
-            
-        </script>
-    </body>
+        alert("Media é: " + media)
+    </script>
+
+    /*teste botaõ*/
+
+    <p id="demo">JavaScript can change HTML content.</p>
+
+    <button type="button" onclick='document.getElementById("demo").innerHTML = "Hello JavaScript!"'>Click Me!</button>
+</body>
+
 </html>
