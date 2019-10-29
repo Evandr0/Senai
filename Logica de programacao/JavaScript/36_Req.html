@@ -1,0 +1,112 @@
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <h1>Cadastro de produtos e funcionários</h1>
+    <p><i>Programa cadastra os produtos do Senai.</i></p>
+
+</head>
+
+<body>
+    <script type="text/javascript">
+        var menu, modeloDoProduto, numeroDeSerie, fabricante, quantidadeMinima, nomeDoFuncionario, matricula
+
+        /*Repetição do menu principal.*/
+        while (true) {
+            menu = parseInt(prompt("Escolha uma opção:\nopção 1: Cadastrar produto\nopção 2: Visualizar produto\nopção 3: Cadastrar funcionario\nopção 4: visualizar funcionario\nopção 5: Editar produto\nopção 6: Editar Funcionário"))
+
+            switch (menu) {
+                case 1:
+                    cadastrar_produto()
+                    break
+                case 2:
+                    visualizar_produto()
+                    break
+                case 3:
+                    cadastrar_funcionario()
+                    break
+                case 4:
+                    visualizar_funcionario()
+                    break
+                case 5:
+                    editar_produto()
+                    break
+                case 6:
+                    editar_funcionario()
+                    break
+            }
+        }
+
+
+        /*Funções*/
+
+        function cadastrar_produto() {
+            modeloDoProduto = prompt("Digite o modelo do produto:")
+            fabricante = prompt("Digite o fabricante:")
+            numeroDeSerie = prompt("Digite o número de série:")
+            estoque = parseInt(prompt("Digite a quantidade e estoque:"))
+            quantidadeMinima = parseInt(prompt("Digite a quantidade minima:"))
+        }
+
+        function visualizar_produto() {
+            alert("\nModelo do produto: " + modeloDoProduto + ".\nFabricante: " + fabricante + ".\nNumero de série: " + numeroDeSerie + ".\nQuantidade em estoque: " + estoque + ".\nQuantidade minima: " + quantidadeMinima + ".")
+        }
+
+        function cadastrar_funcionario() {
+            nomeDoFuncionario = prompt("Digite o nome do funcionário:")
+            matricula = prompt("Digite a matrícula do funcionário")
+        }
+
+        function visualizar_funcionario() {
+            alert("Nome do funcionário: " + nomeDoFuncionario + ".\nMatrícula: " + matricula + ".")
+
+        }
+
+        function editar_produto() {
+            var menu_edicao
+            menu_edicao = parseInt(prompt("Digite qual item deseja alterar: \n1: Modelo do produto.\n2: Fabricante\n3: Numero de série:\n4: Quantidade em estoque.\n5: Quantidade mínima\n6: Alterar tudo"))
+            switch (menu_edicao) {
+                case 1:
+                    modeloDoProduto = prompt("Digite o modelo do produto")
+                    break
+                case 2:
+                    fabricante = prompt("Digite o nome do fabricante")
+                    break
+                case 3:
+                    numeroDeSerie = prompt("Digite o número de série")
+                    break
+                case 4:
+                    estoque = parrseInt(prompt("Digite a quantidade em estoque"))
+                    break
+                case 5:
+                    quantidadeMinima = parseInt(prompt("Digite a quantidade mínima"))
+                    break
+                case 6:
+                    cadastrar_produto()
+                default:
+                    alert("Opção Inválida")
+                    editar_produto()
+            }
+        }
+
+        function editar_funcionario() {
+            var menu_edicaoFunc
+            menu_edicaoFunc = parseInt(prompt("Digite a opção que deseja alterar\n1: Nome do funcionário\n2: Matrícula"))
+
+            switch (menu_edicaoFunc) {
+                case 1:
+                    nomeDoFuncionario = prompt("Digite o nome do funcionário")
+                    break
+                case 2:
+                    matricula = prompt("Digite a matricula do funcionário")
+                    break
+                default:
+                    alert("Opção Inválida")
+                    editar_funcionario()
+            }
+
+        }
+    </script>
+</body>
+
+</html>
