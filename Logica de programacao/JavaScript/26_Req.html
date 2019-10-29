@@ -47,7 +47,7 @@
 
         }
         function editar_produto(){
-            menu_edicao = parseInt(prompt("Digite qual item deseja alterar: \n 1: Modelo do produto.\n 2: Fabricante\n 3: Numero de série:\n 4: Quantidade em estoque.\n 5: Quantidade mínima"))
+            menu_edicao = parseInt(prompt("Digite qual item deseja alterar: \n 1: Modelo do produto.\n 2: Fabricante\n 3: Numero de série:\n 4: Quantidade em estoque.\n 5: Quantidade mínima\n 6: Alterar tudo"))
             switch(menu_edicao){
                 case 1: modeloDoProduto = prompt("Digite o modelo do produto")
                 break
@@ -59,6 +59,7 @@
                 break
                 case 5: quantidadeMinima = parseInt(prompt("Digite a quantidade mínima"))
                 break
+                case 6: cadastrar_produto()
             }
         }
     </script>
