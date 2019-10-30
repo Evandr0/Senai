@@ -1,0 +1,30 @@
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <h1>Contadores - Divisão por 11 == 5</h1>
+    <p><i>While e for</i></p>
+
+</head>
+
+<body>
+    <script type="text/javascript">
+        var cont = 1000
+        while(cont <= 1999){
+            if ((cont % 11) == 5){
+                alert(cont)
+                document.write("<br>" + cont)
+            }
+            cont++
+        }
+
+        for(cont=1000; cont<=1999; cont++){
+            if ((cont % 11) == 5){
+                alert(cont)
+                document.write("<br>" + cont)
+            }
+        }
+    </script>
+</body>
+
+</html>
