@@ -9,33 +9,32 @@
 
 <body>
     <script type="text/javascript">
-
-
-
-
-        var cont =1,valores, maior, menor
+        var template = `0`
+        var cont = 1,
+            valores, maior, menor
         valores = parseInt(prompt("Digite o valor " + cont))
         maior = valores
         menor = valores
         cont++
 
-        
-        while(cont <= 14){
+
+        while (cont <= 3) {
             valores = parseInt(prompt("Digite o valor " + cont))
-            if(valores > maior){
+            if (valores > maior) {
                 maior = valores
-            } else if(valores < menor ){
+            } else if (valores < menor) {
                 menor = valores
-            } else {
-
-            }
+            } else {}
 
 
-            
             cont++
         }
-        alert("Maior número é: " + maior + " Menor número é " + menor)
-        document.write("Maior número é: " + maior + "<br>Menor número é " + menor)
+        template = `Document Maior numero é ${maior} e o menor número é ${menor}!!`
+        alert(`Alert Maior numero é ${maior} e o menor número é ${menor}!!`)
+            //alert("Maior número é: " + maior + " Menor número é " + menor)
+
+        //document.write("Maior número é: " + maior + "<br>Menor número é " + menor)
+        document.write(template)
     </script>
 </body>
 
