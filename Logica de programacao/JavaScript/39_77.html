@@ -2,15 +2,73 @@
 
 <head>
     <meta charset="utf-8">
-    <h1>Contadores - Tabuada</h1>
+    <h1>Contadores - Repetição A ao L</h1>
     <p><i>While e for</i></p>
 
 </head>
 
 <body>
     <script type="text/javascript">
-    
-      
+
+    //exercicio a
+
+    var cont = 0, resultado
+    for(cont = 0; cont<=250; cont++){
+        document.write("<br>" + cont)
+    }
+    //exercicio b
+    document.write("<br>Acabei o primeiro!")
+
+    //exercicio c
+    for(cont = 250; cont>=100; cont--){
+        document.write("<br>" + cont)
+    }
+    //exercicio d
+    document.write("<br>Acabei o segundo!")
+
+    //exericio e
+    for(cont = 100; cont >= 0; cont-=5){
+        document.write("<br>" + cont)   
+    }
+    //exercicio f
+    document.write("<br> acabei o terceiro!")
+
+    //exercicio g
+    document.write("INICIO DO QUE EU QUERO VER!!")
+    for(cont=0; cont<=9600; cont+=3){
+        document.write("<br>" + cont)
+        //cont+=2
+    }
+    //exercicio h
+    document.write("<br> acabei o quarto!")
+
+    //exercicio i
+    cont = 9500
+    while(cont <=9600){
+        if((cont % 2) == 0){
+            //numero eh par
+            document.write("<br>" + cont)
+        }
+        cont++
+    }
+    //exercicio j
+    document.write("<br> acabei o quinto!")
+
+    //exercicio k 
+    cont = 9600
+    while(cont<=10285){
+        if((cont % 2) != 0){
+            //numero eh impar
+            document.write("<br>" + cont)
+        }
+        cont++
+    }
+    //exercicio L
+    document.write("<br> Acabei tudo posso jogar bola?!")
+
+
+
+        
 
     </script>
 </body>

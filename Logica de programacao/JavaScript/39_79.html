@@ -1,0 +1,36 @@
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <h1>Contadores - pares e impacres</h1>
+    <p><i>While e for</i></p>
+
+</head>
+
+<body>
+    <script type="text/javascript">
+
+    var cont, numero, numeroPar = 1, numeroImpar = 0
+    for(cont=1; cont<=6; cont++){
+    numero = parseInt(prompt("Digite o numero " + cont))
+        if((numero % 2) == 0 ){
+            //numero eh par
+            numeroPar = numeroPar * numero
+        } else {
+            //numeor eh impar
+            numeroImpar = numeroImpar + numero
+        }
+    }
+    document.write("O Produto dos números pares: " + numeroPar + "<br>A soma dos números ímpares: " + numeroImpar)
+
+
+
+
+
+
+        
+
+    </script>
+</body>
+
+</html>
