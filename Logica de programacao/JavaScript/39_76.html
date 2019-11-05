@@ -14,7 +14,12 @@
         var cont = 1, xerox = 0.33, resultado
         while(cont <= 500){
             resultado = cont * xerox
-            document.write("<br>" + cont + " copia(s) = R$" + resultado.toFixed(2))
+            if(cont%10 == 0){
+                document.write("<br><b>" + cont + " copia(s) = R$" + resultado.toFixed(2) + "</b>")
+
+            } else {
+                document.write("<br>" + cont + " copia(s) = R$" + resultado.toFixed(2))
+            }
             cont++
         }
 
