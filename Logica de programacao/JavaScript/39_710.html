@@ -10,40 +10,40 @@
 <body>
     <script type="text/javascript">
 
-  var cont = 1, altura, menorAltura = 50.00, maiorAltura = 0.00, mediaAlturaMulheres = 0.00, mediaPopulacao = 0.00, percentHomens, genero = 2, contMulheres = 0, contHomens = 0
-  while(cont<=10){
-      genero = prompt("Digite seu genero.\n0: Para Masculino.\n1: Para Feminino")
-      altura = parseFloat(prompt("Digite a altura: "))
-      if (altura > maiorAltura){
-          maiorAltura = altura
-      }
+    var cont = 1, altura, menorAltura = 50.00, maiorAltura = 0.00, mediaAlturaMulheres = 0.00, mediaPopulacao = 0.00, percentHomens, genero = 2, contMulheres = 0, contHomens = 0
+    while(cont<=10){
+        genero = prompt("Digite seu genero.\n0: Para Masculino.\n1: Para Feminino")
+        altura = parseFloat(prompt("Digite a altura: "))
+        if (altura > maiorAltura){
+            maiorAltura = altura
+        }
 
-      if (altura < menorAltura){
-          menorAltura = altura
-      }
+        if (altura < menorAltura){
+            menorAltura = altura
+        }
 
-      if(genero == 1){
-          mediaAlturaMulheres = mediaAlturaMulheres + altura
-          contMulheres++
+        if(genero == 1){
+            mediaAlturaMulheres = mediaAlturaMulheres + altura
+            contMulheres++
 
-      } else if (genero == 0){
-          contHomens++
-      }
-      mediaPopulacao = mediaPopulacao + altura
-
-
-      cont++
-  }
-  mediaPopulacao = mediaPopulacao/10
-  mediaAlturaMulheres = mediaAlturaMulheres/contMulheres
-  percentHomens = 10*contHomens
-
-  document.write("A maior altura é: " + maiorAltura + ". <br>A menor altura é: " + menorAltura + ".<br>A média das mulheres é: " + mediaAlturaMulheres.toFixed(2) + ".<br>A média da população é: " + mediaPopulacao.toFixed(2) + ".<br>O percentual de homens na população é: " + percentHomens + "%")
+        } else if (genero == 0){
+            contHomens++
+        }
+        mediaPopulacao = mediaPopulacao + altura
 
 
+        cont++
+    }
+    mediaPopulacao = mediaPopulacao/10
+    mediaAlturaMulheres = mediaAlturaMulheres/contMulheres
+    percentHomens = 10*contHomens
+
+    document.write("A maior altura é: " + maiorAltura + ". <br>A menor altura é: " + menorAltura + ".<br>A média das mulheres é: " + mediaAlturaMulheres.toFixed(2) + ".<br>A média da população é: " + mediaPopulacao.toFixed(2) + ".<br>O percentual de homens na população é: " + percentHomens + "%")
 
 
-        
+
+
+            
 
     </script>
 </body>
