@@ -1,0 +1,53 @@
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <h1>Situação de aprendizagem.</h1>
+    <p><i>Cadastro, visualização de estoque</i></p>
+
+</head>
+
+<body>
+    <script type="text/javascript">
+    var modelo = new Array(20)
+    var fabricante = new Array(20)
+    var nSerie = new Array(20)
+    var estoque = new Array(20)
+    var nome_funcionario = new Array(20)
+    var matricula = new Array(20)
+    var qtd_minima = new Array(20)
+    var cont_produto = 0, menu = 0
+
+
+    while(true){
+        menu = parseInt(prompt("Escolha uma opção:\n1: Cadastrar produto\n2: Visualizar Produto\n3: Editar produto\n4: Cadastrar funcionário\n5: Visualizar funcionário\n6: Editar funcionário"))
+
+        switch(menu) {
+            case 1: CadastrarProduto()
+            break
+            case 2: VisualizarProduto()
+            break
+            
+        }
+    }
+    function CadastrarProduto(){
+        modelo[cont_produto] = prompt("Digite o modelo do produto " + (cont_produto + 1) + ".")
+        fabricante[cont_produto] = prompt("Digite o fabricante do produto " + modelo[cont_produto] + ".")
+        nSerie[cont_produto] = prompt("Digite o número de série do produto " + modelo[cont_produto] + ".")
+        estoque[cont_produto] = prompt("Digite a quantidade em estoque do produto " + modelo[cont_produto] + ".")
+        qtd_minima[cont_produto] = prompt("Digite a quantidade mínima em estoque do produto" + modelo[cont_produto] + ".")
+
+        cont_produto++
+    }
+    function VisualizarProduto(){
+        var pesquisa = 0
+        pesquisa = prompt("Digite a posição do produto, temos um total de " + cont_produto + " produto(s)")
+
+            alert("Modelo: " + modelo[pesquisa -1] + "\nFabricante: " + fabricante[pesquisa -1] + "\nNumero de série: " + nSerie[pesquisa -1] + "\nQuantidade em estoque: " + estoque[pesquisa -1])
+        }
+
+
+    </script>
+</body>
+
+</html>
