@@ -1,0 +1,27 @@
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <h1>Exercicio 40-8.1.</h1>
+    <p><i>Temperatudas minima e máxima</i></p>
+
+</head>
+
+<body>
+    <script type="text/javascript">
+    var minima = new Array(30)
+    var maxima = new Array(30)
+
+    for(i=0;i<31;i++){
+        minima[i] = (Math.random() * (+35 - +12) + +12)
+        document.write("<BR> Dia " + (i+1) + "Temp minima: " + minima[i].toFixed(0) );
+        
+    
+        maxima[i] = (Math.random() * (+35 - +minima[i]) + +minima[i])
+        document.write("<BR> Dia " + (i+1) + "Temp máxima: " + maxima[i].toFixed(0) );
+    }
+   
+    </script>
+</body>
+
+</html>
