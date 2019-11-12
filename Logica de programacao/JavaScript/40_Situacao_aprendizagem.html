@@ -9,44 +9,90 @@
 
 <body>
     <script type="text/javascript">
-    var modelo = new Array(20)
-    var fabricante = new Array(20)
-    var nSerie = new Array(20)
-    var estoque = new Array(20)
-    var nome_funcionario = new Array(20)
-    var matricula = new Array(20)
-    var qtd_minima = new Array(20)
-    var cont_produto = 0, menu = 0
+        var modelo = []
+        var fabricante = new Array(20)
+        var nSerie = new Array(20)
+        var estoque = new Array(20)
+        var nome_funcionario = new Array(20)
+        var matricula = new Array(20)
+        var qtd_minima = new Array(20)
+        var cont_produto = 0,
+            menu = 0
 
 
-    while(true){
-        menu = parseInt(prompt("Escolha uma opção:\n1: Cadastrar produto\n2: Visualizar Produto\n3: Editar produto\n4: Cadastrar funcionário\n5: Visualizar funcionário\n6: Editar funcionário"))
+        while (true) {
+            menu = parseInt(prompt("Escolha uma opção:\n1: Cadastrar produto\n2: Visualizar Produto\n3: Editar produto\n4: Cadastrar funcionário\n5: Visualizar funcionário\n6: Editar funcionário"))
 
-        switch(menu) {
-            case 1: CadastrarProduto()
-            break
-            case 2: VisualizarProduto()
-            break
-            
+            switch (menu) {
+                case 1:
+                    CadastrarProduto()
+                    break
+                case 2:
+                    VisualizarProduto()
+                    break
+                case 3:
+                    EditarProduto()
+                    break
+                case 4:
+                    CadastrarFuncionario()
+                    break
+                case 5:
+                    VisualizarFuncionario()
+                    break
+                case 6:
+                    EditarFuncionario()
+                    break
+                default:
+
+
+            }
         }
-    }
-    function CadastrarProduto(){
-        modelo[cont_produto] = prompt("Digite o modelo do produto " + (cont_produto + 1) + ".")
-        fabricante[cont_produto] = prompt("Digite o fabricante do produto " + modelo[cont_produto] + ".")
-        nSerie[cont_produto] = prompt("Digite o número de série do produto " + modelo[cont_produto] + ".")
-        estoque[cont_produto] = prompt("Digite a quantidade em estoque do produto " + modelo[cont_produto] + ".")
-        qtd_minima[cont_produto] = prompt("Digite a quantidade mínima em estoque do produto" + modelo[cont_produto] + ".")
 
-        cont_produto++
-    }
-    function VisualizarProduto(){
-        var pesquisa = 0
-        pesquisa = prompt("Digite a posição do produto, temos um total de " + cont_produto + " produto(s)")
+        function CadastrarProduto() {
+            modelo[cont_produto] = prompt("Digite o modelo do produto " + (cont_produto + 1) + ".")
+            fabricante[cont_produto] = prompt("Digite o fabricante do produto " + modelo[cont_produto] + ".")
+            nSerie[cont_produto] = prompt("Digite o número de série do produto " + modelo[cont_produto] + ".")
+            estoque[cont_produto] = prompt("Digite a quantidade em estoque do produto " + modelo[cont_produto] + ".")
+            qtd_minima[cont_produto] = prompt("Digite a quantidade mínima em estoque do produto " + modelo[cont_produto] + ".")
 
-            alert("Modelo: " + modelo[pesquisa -1] + "\nFabricante: " + fabricante[pesquisa -1] + "\nNumero de série: " + nSerie[pesquisa -1] + "\nQuantidade em estoque: " + estoque[pesquisa -1])
+            cont_produto++
         }
 
+        function VisualizarProduto() {
+            var pesquisa = 0
+            pesquisa = prompt("Digite a posição do produto, temos um total de " + modelo.length + " produto(s)")
 
+            ("Modelo: " + modelo[pesquisa - 1] + "\nFabricante: " + fabricante[pesquisa - 1] + "\nNumero de série: " + nSerie[pesquisa - 1] + "\nQuantidade em estoque: " + estoque[pesquisa - 1])
+        }
+
+        function EditarProduto() {
+
+        }
+
+        function CadastrarFuncionario() {
+
+        }
+
+        function VisualizarFuncionario() {
+
+        }
+
+        function EditarFuncionario() {
+            var win = window.open("", "win", "width=300,height=200") // a window object
+            win.document.open("text/html", "replace")
+            win.document.write("<HTML><HEAD><TITLE>New Document</TITLE></HEAD><BODY><p>Hello, world!</p></BODY></HTML>")
+            win.document.close()
+
+        }
+
+        function openWindow(URL, Width, Height) {
+            Attributes = 'dialogWidth:' + Width + 'px;dialogHeight:' + Height + 'px;';
+            if (window.showModalDialog) { // IE (apenas IE tem esse método)
+                return (window.open(URL, '_blank', Attributes));
+            } else { // Browsers normais =)
+                return (window.open(pUrl, "", Attributes));
+            }
+        }
     </script>
 </body>
 
