@@ -20,31 +20,27 @@
         minima[i] = (Math.random() * (+35 - +12) + +12)
         document.write("<BR> Dia " + (i+1) + " | Temp minima: " + minima[i].toFixed(0) )
             
-
-
-
-        
-            
+           
             //calculo da maxima
         maxima[i] = (Math.random() * (+35 - +minima[i]) + +minima[i])
         document.write("<BR> Dia " + (i+1) + " | Temp máxima: " + maxima[i].toFixed(0) )
             
-            //calculo da media do dia
-            media[i] = (minima[i] + maxima[i])/2
-            document.write("<BR>A média do dia é " + media[i].toFixed(1))
+        //calculo da media do dia
+        media[i] = (minima[i] + maxima[i])/2
+        document.write("<BR>A média do dia é " + media[i].toFixed(1))
                 
-                if(maxima[i] > (minima[i]*2)){
-                    document.write("<BR><b>Iluminatis erraram neste dia</b>")
-                    } else {
-                        document.write("<BR>Iluminatis acertaram neste dia")
-                    }
+        if(maxima[i] > (minima[i]*2)){
+            document.write("<BR><b>Iluminatis erraram neste dia</b>")
+            } else {
+                document.write("<BR>Iluminatis acertaram neste dia")
+            }
 
-                document.write("<BR>--------------------------------------------------------<BR>--------------------------------------------------------<BR>")
-                    //armazenando a maior media e o "dia" que aconteceu.
-                    if(media[i] > maior_media){
-                        maior_media = media[i]
-                        dia_media = i+1
-                    }
+        document.write("<BR>--------------------------------------------------------<BR>--------------------------------------------------------<BR>")
+        //armazenando a maior media e o "dia" que aconteceu.
+        if(media[i] > maior_media){
+            maior_media = media[i]
+            dia_media = i+1
+        }
 
                     
     }
