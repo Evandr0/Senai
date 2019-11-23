@@ -1,0 +1,54 @@
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <h1>Exercicio 41-1</h1>
+    <p><i>Vetores</i></p>
+
+</head>
+
+<body>
+    <script type="text/javascript">
+    var vetor = new Array(25)
+    var n1, n2, resultado = 3, 
+    var posicao = []
+    
+
+    
+    
+    n1 = parseFloat(prompt("Digite o valor de N1"))
+    
+    n2 = parseFloat(prompt("Digite o valor de N2"))
+    n3 = parseInt(prompt("Digite o valor para pesquisa do vetor"))
+
+
+    for(i=0;i<26;i++){
+        //calculo da minima
+        vetor[i] = parseInt(Math.random() * 25)
+        document.write("<BR>Valor do vetor[" + i + "] = " + vetor[i] )
+
+        if (vetor[i] == n3){
+        resultado = 1
+        } else {
+            result = 0
+        }
+    }
+
+
+
+    document.write("<BR> A soma de n1 + n2 é: " + (n1+n2))
+
+   
+    if(resultado == 1){
+        document.write("<BR> Consulta realizada! O vetor com valor <b>" + n3 + "</b> foi consultado e está presenta na lista de vetores na posição " + posicao)
+    } else {
+        document.write("<BR> Vetor <b>" + n3 + "</b> não está presente na lista de vetores. result é" + resultado)
+    }
+
+
+                
+   
+    </script>
+</body>
+
+</html>
