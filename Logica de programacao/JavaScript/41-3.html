@@ -1,0 +1,37 @@
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <h1>Exercicio 41-3</h1>
+    <p><i>Genética</i></p>
+
+</head>
+
+<body>
+    <script type="text/javascript">
+       var pai = new Array(50)
+       var mae = new Array(50)
+       var filho = new Array(50)
+       for(i=0;i<50;i++){
+           pai[i] = Math.floor(Math.random() * 50)
+           document.write("<BR>Genética do Pai " + pai[i])
+       }
+       for(i=0;i<50;i++){
+           mae[i] = Math.floor(Math.random() * 50)
+           document.write("<BR>Genética da mãe " + mae[i])
+
+       }
+       for(i=0;i<50;i++){
+           if(pai[i]%2 == 0){
+               filho[i] = pai[i]
+           } else {
+               filho[i] = mae[i]
+           }
+           document.write("<BR>Genetica do filho " + filho[i])
+       }
+       
+
+    </script>
+</body>
+
+</html>

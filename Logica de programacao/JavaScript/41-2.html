@@ -1,0 +1,30 @@
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <h1>Exercicio 41-2</h1>
+    <p><i>50 posições.</i></p>
+
+</head>
+
+<body>
+    <script type="text/javascript">
+       var vetor = new Array(50)
+       for(i=0;i<51;i++){
+           vetor[i] = getRandomArbitrary(-100,100)
+           if (vetor[i] < 0){
+               vetor[i] = vetor[i] + (2* (-vetor[i]))
+           }
+           document.write("<BR>Vetor[" + i + "] é igual a: " + vetor[i].toFixed(0))
+       }
+
+
+
+
+        function getRandomArbitrary(min, max) {
+            return Math.random() * (max - min) + min;
+        }
+    </script>
+</body>
+
+</html>
