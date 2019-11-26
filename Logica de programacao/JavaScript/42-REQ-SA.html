@@ -17,10 +17,12 @@
         var quantidadeMinima = []
         var nomeDoFuncionario = []
         var matricula = []
+        var id = []
+        var sair = 0
 
         /*Repetição do menu principal..*/
-        while (true) {
-            menu = parseInt(prompt("Escolha uma opção:\nopção 1: Cadastrar produto\nopção 2: Visualizar produto\nopção 3: Cadastrar funcionario\nopção 4: visualizar funcionario\nopção 5: Editar produto\nopção 6: Editar Funcionário"))
+        while (sair == 0) {
+            menu = parseInt(prompt("Escolha uma opção:\nopção 1: Cadastrar produto\nopção 2: Visualizar produto\nopção 3: Cadastrar funcionario\nopção 4: visualizar funcionario\nopção 5: Editar produto\nopção 6: Editar Funcionário\nopção 7: Consulta produtos em falta."))
 
             switch (menu) {
                 case 1:
@@ -41,18 +43,56 @@
                 case 6:
                     editar_funcionario()
                     break
+                case 7:
+                    produtos_em_falta()
+                    break
+                case 8:
+                    inicio_rapido()
+                    break
+                case 9:
+                    imprime()
+                    break
+                case 10:
+                    sair = 1
+                    break
             }
         }
 
 
         /*Funções*/
+        function imprime(){
+            for(i=0;i<=modeloDoProduto.length;i++){
+                document.write("<BR>Modelo do produto: " + modeloDoProduto[i] + ".<BR>Fabricante: " + fabricante[i] + ".<BR>Numero de série: " + numeroDeSerie[i] + ".<BR>Quantidade em estoque: " + estoque[i] + ".<BR>Quantidade minima: " + quantidadeMinima[i] + ".<BR>Nome: " + nomeDoFuncionario[i] + "<BR>Matricula: " + matricula[i])
+            }
+        }
+
+        function produtos_em_falta(){
+            for(i=0;i<estoque.length;i++){
+                if(estoque[i] < quantidadeMinima[i]){
+                    alert("Produtos com estoque mínimo: " + modeloDoProduto[i])
+                }
+            }
+        }
+
+        function inicio_rapido(){
+            for(i=0;i<=5;i++){
+                modeloDoProduto[i] = "Produto" + i
+                fabricante[i] = "Intelbras"
+                numeroDeSerie[i] = 1000 + i
+                quantidadeMinima[i] = 10 + i
+                estoque[i] = i+1
+                nomeDoFuncionario[i] = "Nome" + i
+                matricula[i] = 000 +i
+            }
+        }
 
         function cadastrar_produto() {
             modeloDoProduto[(modeloDoProduto.length)] = prompt("Digite o modelo do produto:")
             fabricante[(modeloDoProduto.length)] = prompt("Digite o fabricante:")
             numeroDeSerie[(modeloDoProduto.length)] = prompt("Digite o número de série:")
             quantidadeMinima[(modeloDoProduto.length)] = parseInt(prompt("Digite a quantidade minima:"))
-            estoque +=fabricante
+            id[(id.length)] = id.length + 1
+            estoque[(estoque.length)] = estoque.length + 1
             
         }
 
@@ -85,26 +125,26 @@
 
         function editar_produto() {
             var menu_edicao
-            menu_edicao = prompt("Como deseja buscar pelo produto?\n1: Modelo\n 2: Fabricante\n3:Número de série")
+            menu_edicao = parseInt(prompt("Como deseja buscar pelo produto?\n1: Modelo\n2: Fabricante\n3: Número de série"))
                 switch(menu_edicao){
                     case 1:
                     menu_edicao = prompt("Digite o modelo")
-                    for(i=0;i<modeloDoProduto.length;i++){
+                    for(i=0;i<=modeloDoProduto.length;i++){
                         if(menu_edicao == modeloDoProduto[i]){
-                            alert("\nModelo = " + modeloDoProduto[i] + "Numero de série = " + numeroDeSerie[i] + "Fabricante = " + fabricante[i])
+                            alert("\nModelo = " + modeloDoProduto[i] + "\nNumero de série = " + numeroDeSerie[i] + "\nFabricante = " + fabricante[i])
                         }
                     }
                     break
                     case 2:
                     menu_edicao = prompt("Digite o fabricante")
-                    for(i=0;i<fabricante.length;i++){
+                    for(i=0;i<=fabricante.length;i++){
                         if(menu_edicao == fabricante[i]){
-                            alert("\nModelo = " + modeloDoProduto[i] + "Numero de série = " + numeroDeSerie[i] + "Fabricante = " + fabricante[i])
+                            alert("\nModelo = " + modeloDoProduto[i] + "\nNumero de série = " + numeroDeSerie[i] + "\nFabricante = " + fabricante[i])
                         }
                     }
                     break
                     case 3:
-                    menu_edicao = prompt("Digite o número de série")
+                    menu_edicao = parseInt(prompt("Digite o número de série"))
                         for(i=0;i<=numeroDeSerie.length;i++){
                             if(menu_edicao == numeroDeSerie[i]){
                             menu_edicao = parseInt(prompt("Qual item do produto desejas alterar?\n1: Modelo\n2: Fabricante\n3: numero de série\n4: Estoque\n5: Quantidade Minima:\n6:Tudo??"))
