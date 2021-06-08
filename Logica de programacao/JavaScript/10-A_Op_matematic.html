@@ -9,12 +9,14 @@
 
 <body>
     <script type="text/javascript">
-        var salario_diario, salario, dias
+        var salario_diario, salario, dias, horas, salario_horas
         salario = prompt("Digite seu salario Mensal.")
         dias = prompt("Digite quantos dias trabalha no Mês.")
+        horas = prompt("Digite quantas horas trabalha por dia.")
         salario_diario = salario / dias
+        salario_horas = salario_diario / horas
         alert("Seu salario diário é R$" + salario_diario.toFixed(2))
-        document.write("<br> Salario mensal: R$" + salario + "<br> Dias trabalhados: " + dias + " dias" + "<br> Salario diario: R$" + salario_diario.toFixed(2))
+        document.write("<br> Salario mensal: R$" + salario + "<br> Dias trabalhados: " + dias + " dias" + "<br> Salario diario: R$" + salario_diario.toFixed(2) + "<br>Salário por hora: R$" + salario_horas.toFixed(2))
     </script>
 </body>
 
